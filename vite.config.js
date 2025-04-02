@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: '/',
+  base: '/Landing-page-for-composers-course',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
