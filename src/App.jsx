@@ -200,36 +200,56 @@ const App = () => {
           </div>
         </div>
       </section>
-      
-      {/* CTA Section */}
+
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6 text-amber-400">הגיע הזמן להגשים את החלום</h2>
           <p className="text-xl max-w-3xl mx-auto mb-10">הצטרפו לקורס המקוצר של אלחנן אלחדד והתחילו את המסע שלכם להפוך למלחינים ויוצרים מוזיקליים מקצועיים.</p>
           
-          <div className="max-w-md mx-auto bg-gray-900 rounded-xl p-8 shadow-lg">
+          <form name='contact' method="post" className="max-w-md mx-auto bg-gray-900 rounded-xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold mb-6">השאירו פרטים ונחזור אליכם</h3>
-            
+            <input type="hidden" name="form-name" value="contact" />
             <div className="space-y-4">
               <div className="relative">
-                <input type="text" placeholder="שם מלא" className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" />
+                <input 
+                  type="text" 
+                  name="fullName"
+                  required
+                  placeholder="שם מלא" 
+                  className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" 
+                />
               </div>
               
               <div className="relative">
-                <input type="tel" placeholder="טלפון" className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  required
+                  placeholder="טלפון" 
+                  className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" 
+                />
               </div>
               
               <div className="relative">
-                <input type="email" placeholder="אימייל" className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" />
+                <input 
+                  type="email" 
+                  name="email"
+                  required
+                  placeholder="אימייל" 
+                  className="w-full p-3 bg-gray-800 rounded-lg border-none focus:ring-2 focus:ring-amber-400 text-white" 
+                />
               </div>
               
-              <Button className="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 !rounded-Button whitespace-nowrap cursor-pointer">
+              <button 
+                type="submit" 
+                className="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg whitespace-nowrap cursor-pointer"
+              >
                 מעניין אותי
-              </Button>
+              </button>
               
               <p className="text-sm text-gray-400 mt-4">או התקשרו ישירות: 0527670194</p>
             </div>
-          </div>
+          </form>
         </div>
       </section>
       
